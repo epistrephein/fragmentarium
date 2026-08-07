@@ -1,0 +1,33 @@
+---
+import {
+  formatDate,
+  fragmentTitle,
+  fragmentUrl,
+  isoDate,
+  type Fragment,
+} from '../lib/fragments';
+
+interface Props {
+  fragments: Fragment[];
+}
+
+const { fragments } = Astro.props;
+---
+
+<div class="register">
+  {
+    fragments.map((fragment) => (
+      <a class="register-row" href={fragmentUrl(fragment)}>
+        <span>
+          <span class="register-title">{fragmentTitle(fragment)}</span>
+          {fragment.data.description && (
+            <span class="register-description">{fragment.data.description}</span>
+          )}
+        </span>
+        <time class="register-date" datetime={isoDate(fragment.data.published)}>
+          {formatDate(fragment.data.published)}
+        </time>
+      </a>
+    ))
+  }
+</div>

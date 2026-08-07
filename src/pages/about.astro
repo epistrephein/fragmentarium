@@ -1,0 +1,52 @@
+---
+import Base from '../layouts/Base.astro';
+import { getFragments } from '../lib/fragments';
+
+const fragments = await getFragments();
+---
+
+<Base
+  title="Informazioni — La campagna silenziosa"
+  description="Come funziona la pubblicazione a frammenti de La campagna silenziosa."
+>
+  <section class="container page-head">
+    <p class="page-eyebrow label">Informazioni</p>
+    <h1 class="page-title">Come si legge</h1>
+  </section>
+
+  <section class="container prose">
+    <p>
+      <em>La campagna silenziosa</em> è un romanzo pubblicato a frammenti, nell&rsquo;ordine
+      in cui viene scritto. Ogni frammento è una scena chiusa: si può leggere da solo,
+      ma il conto progressivo tiene la sequenza. Al momento ne sono online {fragments.length}.
+    </p>
+    <p>
+      I frammenti non hanno titolo. Un titolo anticipa, e qui l&rsquo;anticipo
+      guasterebbe il passo: si contano e basta. Il numero indica la posizione nel
+      romanzo, la data indica quando è stato pubblicato.
+    </p>
+
+    <h2>Dove trovarli</h2>
+    <p>
+      L&rsquo;<a href="/archive/">archivio</a> raccoglie tutto quanto è uscito finora.
+      Chi preferisce ricevere i frammenti man mano può seguire il <a href="/rss.xml">feed RSS</a>:
+      ogni nuova uscita arriva con lo stesso nome che
+      porta sul sito.
+    </p>
+
+    <h2>Il testo</h2>
+    <p>
+      Le pagine di questo sito sono testi dimostrativi: servono a mostrare
+      l&rsquo;impaginazione, non a raccontare la storia definitiva. Il romanzo cambia
+      mentre procede, e i frammenti già pubblicati possono essere ritoccati: la data
+      resta quella della prima uscita.
+    </p>
+
+    <h2>Contatti</h2>
+    <p>
+      Per segnalazioni, refusi o discussioni: <a href="mailto:redazione@lacampagnasilenziosa.it"
+        >redazione@lacampagnasilenziosa.it</a
+      >.
+    </p>
+  </section>
+</Base>

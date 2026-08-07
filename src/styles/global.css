@@ -1,0 +1,567 @@
+/* ==========================================================================
+   La campagna silenziosa — single stylesheet
+   Palette: warm paper, warm near-black ink, faded blue ink as the only
+   accent, hairline rules borrowed from a ledger.
+   ========================================================================== */
+
+:root {
+  --paper: #fcfaf5;
+  --paper-shade: #f4f0e6;
+  --ink: #201c18;
+  --ink-muted: #6c6458;
+  --rule: #ded7c7;
+  --accent: #2f4468;
+
+  --font-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua',
+    'URW Palladio L', Georgia, serif;
+  --font-sans: 'Inter', ui-sans-serif, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+
+  --container: 54rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* --- scaffolding ---------------------------------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 1.75rem;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* --- utility labels ------------------------------------------------------- */
+
+.label {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+/* --- masthead ------------------------------------------------------------- */
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+}
+
+.masthead-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 3.5rem;
+  padding-block: 1.1rem;
+}
+
+.masthead-link {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  transition: color 140ms ease;
+}
+
+.masthead-link:hover,
+.masthead-link:focus-visible {
+  color: var(--accent);
+}
+
+/* --- homepage opening ----------------------------------------------------- */
+
+.hero {
+  padding-block: clamp(3.5rem, 11vh, 7rem) clamp(2.75rem, 7vh, 4.5rem);
+}
+
+.hero-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(2.75rem, 9.5vw, 5.75rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+}
+
+.hero-title em {
+  font-style: italic;
+}
+
+.work-author {
+  margin: 0.45rem 0 0;
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+.hero .work-author {
+  font-size: 1.3rem;
+  color: var(--ink);
+}
+
+.hero-status {
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.1rem;
+}
+
+.hero-status span + span::before {
+  content: '·';
+  margin-right: 1.1rem;
+  color: var(--rule);
+}
+
+.hero-intro {
+  margin: 2.25rem 0 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  hyphens: auto;
+}
+
+.hero-intro p {
+  margin: 0 0 0.8em;
+}
+
+.hero-intro p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- fragment register (homepage and archive) ----------------------------- */
+
+.register {
+  border-top: 1px solid var(--ink);
+}
+
+.register-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: 0 2rem;
+  padding: 1.15rem 1.25rem;
+  border-bottom: 1px solid var(--rule);
+  transition: background-color 140ms ease;
+}
+
+.register-row:hover,
+.register-row:focus-visible {
+  background-color: var(--paper-shade);
+}
+
+.register-title {
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.register-description {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.9375rem;
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--ink-muted);
+}
+
+.register-date {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+
+.register-row:hover .register-title {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+/* --- section and page headings -------------------------------------------- */
+
+.section {
+  padding-block: 0 clamp(3rem, 8vh, 5rem);
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.75rem;
+}
+
+.section-title {
+  margin: 0;
+}
+
+.page-eyebrow {
+  margin: 0;
+}
+
+.page-head {
+  padding-block: clamp(2.75rem, 8vh, 4.5rem) 1.75rem;
+}
+
+.page-title {
+  margin: 0.6rem 0 0;
+  font-weight: 400;
+  font-size: clamp(2rem, 5.5vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+
+/* --- fragment ------------------------------------------------------------- */
+
+.fragment {
+  padding-block: clamp(3rem, 9vh, 5.5rem) clamp(3rem, 8vh, 5rem);
+}
+
+.fragment-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(1.875rem, 5vw, 2.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+
+.fragment-date {
+  display: block;
+  margin-top: 0.7rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.1em;
+  color: var(--ink-muted);
+}
+
+.fragment-text {
+  margin-top: 2.5rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  hyphens: auto;
+}
+
+.fragment-text p {
+  margin: 0 0 0.3em;
+  text-indent: 1.35em;
+}
+
+.fragment-text p:last-child {
+  margin-bottom: 0;
+}
+
+.fragment-text em {
+  font-style: italic;
+}
+
+/* breathing room between scenes, no decorative rule */
+.fragment-text hr {
+  border: 0;
+  height: 0;
+  margin: 1.7rem 0;
+  text-align: center;
+}
+
+.fragment-text hr::after {
+  content: '·  ·  ·';
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  color: var(--rule);
+}
+
+.fragment-text blockquote {
+  margin: 1.2rem 0 1.2rem 1.35em;
+  padding: 0;
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+.fragment-text blockquote p {
+  text-indent: 0;
+}
+
+/* --- continuous reading -------------------------------------------------- */
+
+.reading {
+  padding-block: clamp(2.75rem, 8vh, 4.5rem) clamp(3rem, 8vh, 5rem);
+}
+
+.reading-meta {
+  margin: 1.1rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.1rem;
+}
+
+.reading-meta span + span::before {
+  content: '·';
+  margin-right: 1.1rem;
+  color: var(--rule);
+}
+
+.reading-text {
+  margin-top: 3rem;
+}
+
+.fragment-text .reading-fragment-number {
+  margin: 0 0 0.75rem;
+  font-size: 0.625rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.12em;
+  color: var(--rule);
+  text-indent: 0;
+}
+
+/* a quiet pause where one fragment ends and the next begins */
+.fragment-text .fragment-break {
+  margin: 1.5rem 0;
+}
+
+/* --- generic prose ------------------------------------------------------- */
+
+.prose {
+  padding-bottom: clamp(3rem, 8vh, 5rem);
+  font-size: 1.125rem;
+  line-height: 1.55;
+}
+
+.prose p {
+  margin: 0 0 1.1em;
+}
+
+.prose h2 {
+  margin: 2.5rem 0 0.65rem;
+  font-weight: 400;
+  font-size: 1.375rem;
+  letter-spacing: 0.01em;
+}
+
+.prose a:not(.label) {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: var(--rule);
+  transition: text-decoration-color 140ms ease, color 140ms ease;
+}
+
+.prose a:hover,
+.prose a:focus-visible {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+}
+
+/* --- fragment-to-fragment navigation ------------------------------------- */
+
+.pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: clamp(3.5rem, 10vh, 6rem);
+  padding-block: 1.5rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.pager-link {
+  display: block;
+  transition: color 140ms ease;
+}
+
+.pager-link-next {
+  grid-column: 2;
+  text-align: right;
+}
+
+.pager-link:hover,
+.pager-link:focus-visible {
+  color: var(--accent);
+}
+
+.pager-direction {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.pager-title {
+  font-size: 1.0625rem;
+}
+
+.pager-mobile {
+  display: none;
+}
+
+.pager-link:hover .pager-title {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+/* --- footer -------------------------------------------------------------- */
+
+.footer {
+  margin-top: auto;
+  border-top: 1px solid var(--ink);
+  padding-block: 1.5rem 2.5rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-nav a {
+  transition: color 140ms ease;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+  color: var(--accent);
+}
+
+.footer-note {
+  margin: 0;
+}
+
+/* --- accessibility ------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* --- narrow screens ------------------------------------------------------ */
+
+@media (max-width: 46rem) {
+  .hero {
+    padding-top: 2.25rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3.25rem, 15vw, 4.5rem);
+  }
+
+  .hero-status {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .hero-status span + span::before {
+    display: none;
+  }
+
+  .reading-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .reading-meta span + span::before {
+    display: none;
+  }
+
+  .register-row {
+    grid-template-columns: 1fr;
+    row-gap: 0.4rem;
+    padding-inline: 0;
+  }
+
+  .footer-inner,
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-inner {
+    gap: 0;
+  }
+
+  .footer-nav {
+    gap: 0.5rem;
+  }
+
+  .footer-note {
+    margin-top: 1.5rem;
+  }
+
+  .hero-intro,
+  .fragment-text,
+  .prose {
+    font-size: 1.125rem;
+  }
+
+  .pager {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .pager-desktop {
+    display: none;
+  }
+
+  .pager-mobile {
+    display: block;
+    font-size: 1rem;
+  }
+
+  .pager-link {
+    padding-block: 1rem;
+  }
+
+  .pager-link-next {
+    grid-column: 2;
+    text-align: right;
+  }
+}

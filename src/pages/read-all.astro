@@ -1,0 +1,56 @@
+---
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { formatDate, getFragments } from '../lib/fragments';
+
+const fragments = await getFragments();
+
+// One rendered body per fragment, in narrative order. The number remains as a
+// deliberately quiet waypoint for readers who want to orient themselves.
+const chapters = await Promise.all(
+  fragments.map(async (fragment) => ({
+    id: fragment.data.order,
+    Content: (await render(fragment)).Content,
+  }))
+);
+
+const dates = fragments.map((fragment) => fragment.data.published.getTime());
+const firstDate = dates.length ? new Date(Math.min(...dates)) : undefined;
+const lastDate = dates.length ? new Date(Math.max(...dates)) : undefined;
+---
+
+<Base
+  title="Leggi dall'inizio — La campagna silenziosa"
+  description="Tutti i frammenti pubblicati de La campagna silenziosa, uno dopo l'altro, in un'unica lettura continua."
+>
+  <article class="container reading">
+    <p class="page-eyebrow label">Lettura continua</p>
+    <h1 class="page-title">La campagna silenziosa</h1>
+    <p class="work-author">di Tommaso Barbato</p>
+
+    <p class="reading-meta label">
+      <span>{fragments.length} {fragments.length === 1 ? 'frammento' : 'frammenti'}</span>
+      {
+        firstDate && lastDate && (
+          <span>
+            {formatDate(firstDate)} &ndash; {formatDate(lastDate)}
+          </span>
+        )
+      }
+    </p>
+
+    <div class="fragment-text reading-text">
+      {
+        chapters.map(({ id, Content }, index) => (
+          <>
+            {index > 0 && <hr class="fragment-break" />}
+            <div id={`fragment-${id}`}>
+              <p class="reading-fragment-number label">#{id}</p>
+              <Content />
+            </div>
+          </>
+        ))
+      }
+    </div>
+  </article>
+</Base>

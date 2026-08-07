@@ -1,0 +1,82 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import {
+  formatDate,
+  fragmentTitle,
+  fragmentUrl,
+  getFragments,
+  isoDate,
+} from '../../lib/fragments';
+
+export const getStaticPaths = (async () => {
+  const fragments = await getFragments();
+
+  return fragments.map((fragment, index) => ({
+    params: { order: String(fragment.data.order) },
+    props: {
+      fragment,
+      previous: fragments[index - 1],
+      next: fragments[index + 1],
+    },
+  }));
+}) satisfies GetStaticPaths;
+
+const { fragment, previous, next } = Astro.props;
+const { Content } = await render(fragment);
+
+const title = fragmentTitle(fragment);
+---
+
+<Base
+  title={`${title} — La campagna silenziosa`}
+  description={fragment.data.description ??
+    `${title} de La campagna silenziosa, romanzo italiano a frammenti.`}
+>
+  <article class="container fragment">
+    <h1 class="fragment-title">{title}</h1>
+    <time class="fragment-date" datetime={isoDate(fragment.data.published)}>
+      {formatDate(fragment.data.published)}
+    </time>
+
+    <div class="fragment-text">
+      <Content />
+    </div>
+
+    <nav class="pager" aria-label="Fragment navigation">
+      {
+        previous && (
+          <a
+            class="pager-link"
+            href={fragmentUrl(previous)}
+            rel="prev"
+            aria-label={`Previous fragment #${previous.data.order}`}
+          >
+            <span class="pager-desktop">
+              <span class="pager-direction label">&#8592; Precedente</span>
+              <span class="pager-title">{fragmentTitle(previous)}</span>
+            </span>
+            <span class="pager-mobile label">&#8592; #{previous.data.order}</span>
+          </a>
+        )
+      }
+      {
+        next && (
+          <a
+            class="pager-link pager-link-next"
+            href={fragmentUrl(next)}
+            rel="next"
+            aria-label={`Next fragment #${next.data.order}`}
+          >
+            <span class="pager-desktop">
+              <span class="pager-direction label">Successivo &#8594;</span>
+              <span class="pager-title">{fragmentTitle(next)}</span>
+            </span>
+            <span class="pager-mobile label">#{next.data.order} &#8594;</span>
+          </a>
+        )
+      }
+    </nav>
+  </article>
+</Base>

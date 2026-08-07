@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import Register from '../components/Register.astro';
+import { formatDate, getRecentFragments } from '../lib/fragments';
+
+const fragments = await getRecentFragments();
+const latest = fragments.slice(0, 15);
+const lastUpdate = fragments[0]?.data.published;
+---
+
+<Base
+  title="La campagna silenziosa — romanzo in frammenti"
+  description="Romanzo italiano pubblicato a frammenti: una provincia che si svuota, una campagna elettorale che nessuno nomina."
+  showMasthead={false}
+>
+  <section class="container hero">
+    <h1 class="hero-title">La campagna<br />silenziosa</h1>
+    <p class="work-author">di Tommaso Barbato</p>
+
+    <p class="hero-status label">
+      <span>Un romanzo in frammenti</span>
+      <span>{fragments.length} {fragments.length === 1 ? 'frammento' : 'frammenti'}</span>
+      {lastUpdate && <span>Ultimo: {formatDate(lastUpdate)}</span>}
+    </p>
+
+    <div class="hero-intro">
+      <p>
+        Un romanzo che esce un pezzo alla volta. Estate in una provincia che si svuota:
+        manifesti scoloriti sui muri di cinta, un comitato che si riunisce nella stanza
+        sopra la farmacia, un impiegato dell&rsquo;anagrafe che tiene il conto di chi
+        parte e non torna.
+      </p>
+      <p>
+        Nessuno alza la voce. Per questo si sente tutto. I frammenti non hanno titolo:
+        si contano.
+      </p>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="section-head">
+      <h2 class="section-title label">Ultimi frammenti</h2>
+      <a class="label" href="/archive/">Archivio &#8594;</a>
+    </div>
+    <Register fragments={latest} />
+  </section>
+</Base>

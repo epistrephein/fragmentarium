@@ -1,0 +1,81 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** The homepage keeps a mute top edge: the title lives in the hero instead. */
+  showMasthead?: boolean;
+}
+
+const {
+  title,
+  description = 'La campagna silenziosa, romanzo italiano pubblicato a frammenti.',
+  showMasthead = true,
+} = Astro.props;
+
+const currentYear = new Date().getFullYear();
+---
+
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="La campagna silenziosa"
+      href={new URL('rss.xml', Astro.site)}
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="La campagna silenziosa" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL('og-placeholder.png', Astro.site)} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1731" />
+    <meta property="og:image:height" content="909" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={new URL('og-placeholder.png', Astro.site)} />
+  </head>
+
+  <body>
+    {
+      showMasthead && (
+        <header class="masthead">
+          <div class="container masthead-inner">
+            <a class="masthead-link" href="/">La campagna silenziosa</a>
+          </div>
+        </header>
+      )
+    }
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <nav class="footer-nav label" aria-label="Secondary navigation">
+          <a href="/read-all/">Leggi dall&rsquo;inizio</a>
+          <a href="/archive/">Archivio</a>
+          <a href="/about/">Informazioni</a>
+          <a href="/rss.xml">RSS</a>
+        </nav>
+        <p class="footer-note label">&copy; {currentYear} Tommaso Barbato</p>
+      </div>
+    </footer>
+  </body>
+</html>

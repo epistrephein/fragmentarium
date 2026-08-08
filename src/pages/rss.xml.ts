@@ -1,11 +1,11 @@
 import rss from '@astrojs/rss';
 import type { APIRoute } from 'astro';
-import { fragmentTitle, fragmentUrl, getRecentFragments } from '../lib/fragments';
+import { fragmentTitle, fragmentUrl, getFragmentsDescending } from '../lib/fragments';
 
 const authorName = 'Tommaso Barbato';
 
 export const GET: APIRoute = async (context) => {
-  const fragments = await getRecentFragments();
+  const fragments = await getFragmentsDescending();
 
   return rss({
     title: 'La campagna silenziosa',

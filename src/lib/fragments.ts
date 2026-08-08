@@ -8,13 +8,10 @@ export async function getFragments(): Promise<Fragment[]> {
   return fragments.sort((a, b) => a.data.order - b.data.order);
 }
 
-/** The same fragments, newest publication date first. */
-export async function getRecentFragments(): Promise<Fragment[]> {
+/** The same fragments in descending narrative order. */
+export async function getFragmentsDescending(): Promise<Fragment[]> {
   const fragments = await getFragments();
-  return [...fragments].sort((a, b) => {
-    const delta = b.data.published.getTime() - a.data.published.getTime();
-    return delta !== 0 ? delta : b.data.order - a.data.order;
-  });
+  return [...fragments].reverse();
 }
 
 export function fragmentTitle(fragment: Fragment): string {

@@ -1,9 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 import Register from '../components/Register.astro';
-import { formatDate, getRecentFragments } from '../lib/fragments';
+import { formatDate, getFragmentsDescending } from '../lib/fragments';
 
-const fragments = await getRecentFragments();
+const fragments = await getFragmentsDescending();
 const latest = fragments.slice(0, 15);
 const lastUpdate = fragments[0]?.data.published;
 ---

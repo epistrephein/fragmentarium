@@ -1,14 +1,14 @@
 ---
 import Base from '../layouts/Base.astro';
 import Register from '../components/Register.astro';
-import { getRecentFragments } from '../lib/fragments';
+import { getFragmentsDescending } from '../lib/fragments';
 
-const fragments = await getRecentFragments();
+const fragments = await getFragmentsDescending();
 ---
 
 <Base
   title="Archivio — La campagna silenziosa"
-  description="Tutti i frammenti pubblicati de La campagna silenziosa, dal più recente."
+  description="Tutti i frammenti pubblicati de La campagna silenziosa, in ordine inverso."
 >
   <section class="container page-head">
     <p class="page-eyebrow label">Archivio</p>

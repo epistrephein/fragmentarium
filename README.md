@@ -53,8 +53,9 @@ draft: true
 
 - `published` is the publication date in `YYYY-MM-DD` format.
 - `order` is a unique positive integer that defines reading order.
-- `description` is optional and is used in the archive and RSS feed.
-- `draft: true` excludes a fragment from the site, archive, and RSS feed.
+- `description` is optional and is shown in the archive and RSS feed.
+- `draft: true` is optional and excludes a fragment from the site, archive and
+  RSS feed.
 
 ## Customization
 
@@ -71,9 +72,9 @@ Before using this template for a real site, update at least:
 Pages are generated statically:
 
 - `/` — home page
-- `/archive/` — list of published fragments
-- `/read-all/` — continuous reading page
 - `/fragments/:order/` — individual fragment
+- `/read-all/` — continuous reading page
+- `/archive/` — list of published fragments
 - `/about/` — informational page
 - `/rss.xml` — RSS feed
 

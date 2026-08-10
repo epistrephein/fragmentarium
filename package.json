@@ -10,6 +10,7 @@
     "astro": "astro",
     "new": "node scripts/new-fragment.mjs",
     "drafts": "node scripts/list-drafts.mjs",
+    "validate": "node scripts/validate-fragments.mjs",
     "publish": "node scripts/publish-fragment.mjs"
   },
   "dependencies": {

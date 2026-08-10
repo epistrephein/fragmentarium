@@ -28,6 +28,7 @@ Commands:
 | `npm run preview` | Serves the `dist/` output locally. |
 | `npm run new` | Creates the next Markdown fragment as a draft. |
 | `npm run drafts` | Lists existing drafts, ordered by number. |
+| `npm run validate` | Checks that published fragments have no missing earlier numbers. |
 | `npm run publish <N>` | Publishes fragment `N` by removing `draft: true`. |
 
 ## Content

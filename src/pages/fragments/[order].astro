@@ -34,11 +34,20 @@ const title = fragmentTitle(fragment);
   description={fragment.data.description ??
     `${title} de La campagna silenziosa, romanzo italiano a frammenti.`}
 >
-  <article class="container fragment">
+  <article
+    class="container fragment"
+    data-current-fragment
+    data-fragment-order={fragment.data.order}
+  >
     <h1 class="fragment-title">{title}</h1>
-    <time class="fragment-date" datetime={isoDate(fragment.data.published)}>
-      {formatDate(fragment.data.published)}
-    </time>
+    <div class="fragment-meta">
+      <time class="fragment-date" datetime={isoDate(fragment.data.published)}>
+        {formatDate(fragment.data.published)}
+      </time>
+      <button class="fragment-read-status" type="button" data-read-toggle aria-pressed="false">
+        NON LETTO
+      </button>
+    </div>
 
     <div class="fragment-text">
       <Content />
@@ -52,12 +61,14 @@ const title = fragmentTitle(fragment);
             href={fragmentUrl(previous)}
             rel="prev"
             aria-label={`Previous fragment #${previous.data.order}`}
+            data-fragment-order={previous.data.order}
           >
             <span class="pager-desktop">
               <span class="pager-direction label">&#8592; Precedente</span>
               <span class="pager-title">{fragmentTitle(previous)}</span>
             </span>
             <span class="pager-mobile label">&#8592; #{previous.data.order}</span>
+            <span class="pager-read-label label">&#10003; Letto</span>
           </a>
         )
       }
@@ -68,15 +79,34 @@ const title = fragmentTitle(fragment);
             href={fragmentUrl(next)}
             rel="next"
             aria-label={`Next fragment #${next.data.order}`}
+            data-fragment-order={next.data.order}
           >
             <span class="pager-desktop">
               <span class="pager-direction label">Successivo &#8594;</span>
               <span class="pager-title">{fragmentTitle(next)}</span>
             </span>
             <span class="pager-mobile label">#{next.data.order} &#8594;</span>
+            <span class="pager-read-label label">&#10003; Letto</span>
           </a>
         )
       }
     </nav>
   </article>
+
+  <script>
+    const currentFragment = document.querySelector<HTMLElement>('[data-current-fragment]');
+
+    if (currentFragment) {
+      const order = Number(currentFragment.dataset.fragmentOrder);
+
+      window.setTimeout(() => {
+        if (!Number.isInteger(order) || order < 1) return;
+        if (currentFragment.dataset.readStatusToggled === 'true') return;
+
+        document.dispatchEvent(
+          new CustomEvent('fragmentastro:fragment-read', { detail: { order } }),
+        );
+      }, 5_000);
+    }
+  </script>
 </Base>

@@ -17,9 +17,14 @@ const { fragments } = Astro.props;
 <div class="register">
   {
     fragments.map((fragment) => (
-      <a class="register-row" href={fragmentUrl(fragment)}>
+      <a
+        class="register-row"
+        href={fragmentUrl(fragment)}
+        data-fragment-order={fragment.data.order}
+      >
         <span>
           <span class="register-title">{fragmentTitle(fragment)}</span>
+          <span class="register-read-label label">&#10003; Letto</span>
           {fragment.data.description && (
             <span class="register-description">{fragment.data.description}</span>
           )}

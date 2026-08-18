@@ -184,6 +184,23 @@ main {
   line-height: 1.25;
 }
 
+.register-read-label {
+  display: none;
+  margin-left: 0.55rem;
+  font-size: 0.5625rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-muted);
+  vertical-align: 0.16em;
+}
+
+.register-row.is-read .register-read-label {
+  display: inline;
+}
+
+.register-row.is-read .register-title {
+  color: var(--ink-muted);
+}
+
 .register-description {
   display: block;
   margin-top: 0.35rem;
@@ -256,13 +273,44 @@ main {
   letter-spacing: -0.015em;
 }
 
-.fragment-date {
-  display: block;
+.fragment-meta {
   margin-top: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6rem 1.1rem;
+}
+
+.fragment-meta > * + *::before {
+  content: '·';
+  margin-right: 1.1rem;
+  color: var(--rule);
+}
+
+.fragment-date {
   font-family: var(--font-sans);
   font-size: 0.75rem;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.1em;
+  color: var(--ink-muted);
+}
+
+.fragment-read-status {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rule);
+  cursor: pointer;
+}
+
+.fragment.is-read .fragment-read-status {
   color: var(--ink-muted);
 }
 
@@ -420,6 +468,22 @@ main {
 
 .pager-mobile {
   display: none;
+}
+
+.pager-read-label {
+  display: none;
+  margin-top: 0.35rem;
+  font-size: 0.5625rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-muted);
+}
+
+.pager-link.is-read .pager-read-label {
+  display: block;
+}
+
+.pager-link.is-read .pager-title {
+  color: var(--ink-muted);
 }
 
 .pager-link:hover .pager-title {

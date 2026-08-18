@@ -77,5 +77,93 @@ const currentYear = new Date().getFullYear();
         <p class="footer-note label">&copy; {currentYear} Tommaso Barbato</p>
       </div>
     </footer>
+
+    <script>
+      const readFragmentsStorageKey = 'fragmentastro.read-fragments';
+
+      function getReadFragmentOrders() {
+        try {
+          const saved = JSON.parse(localStorage.getItem(readFragmentsStorageKey) ?? '[]');
+
+          if (!Array.isArray(saved)) return new Set();
+
+          return new Set(
+            saved
+              .filter((order) => Number.isInteger(order) && order > 0)
+              .map((order) => String(order)),
+          );
+        } catch {
+          return new Set();
+        }
+      }
+
+      const readFragmentOrders = getReadFragmentOrders();
+
+      function saveReadFragmentOrders() {
+        try {
+          localStorage.setItem(
+            readFragmentsStorageKey,
+            JSON.stringify([...readFragmentOrders].map(Number)),
+          );
+        } catch {
+          // Reading should remain uninterrupted if browser storage is unavailable.
+        }
+      }
+
+      function applyReadStates() {
+        document.querySelectorAll<HTMLElement>('[data-fragment-order]').forEach((element) => {
+          const isRead = readFragmentOrders.has(element.dataset.fragmentOrder ?? '');
+          element.classList.toggle('is-read', isRead);
+
+          const readToggle = element.querySelector<HTMLButtonElement>('[data-read-toggle]');
+          if (readToggle) {
+            readToggle.textContent = isRead ? '✓ LETTO' : 'NON LETTO';
+            readToggle.setAttribute('aria-pressed', String(isRead));
+          }
+        });
+      }
+
+      function refreshReadStates() {
+        readFragmentOrders.clear();
+        getReadFragmentOrders().forEach((order) => readFragmentOrders.add(order));
+        applyReadStates();
+      }
+
+      applyReadStates();
+
+      window.addEventListener('pageshow', refreshReadStates);
+      window.addEventListener('storage', (event) => {
+        if (event.key === readFragmentsStorageKey || event.key === null) {
+          refreshReadStates();
+        }
+      });
+
+      document.addEventListener('fragmentastro:fragment-read', (event) => {
+        const order = (event as CustomEvent<{ order: number }>).detail.order;
+        readFragmentOrders.add(String(order));
+        saveReadFragmentOrders();
+        applyReadStates();
+      });
+
+      document.addEventListener('click', (event) => {
+        const readToggle = (event.target as Element).closest<HTMLButtonElement>('[data-read-toggle]');
+        if (!readToggle) return;
+
+        const fragment = readToggle.closest<HTMLElement>('[data-fragment-order]');
+        const order = fragment?.dataset.fragmentOrder;
+        if (!order) return;
+
+        fragment.dataset.readStatusToggled = 'true';
+
+        if (readFragmentOrders.has(order)) {
+          readFragmentOrders.delete(order);
+        } else {
+          readFragmentOrders.add(order);
+        }
+
+        saveReadFragmentOrders();
+        applyReadStates();
+      });
+    </script>
   </body>
 </html>

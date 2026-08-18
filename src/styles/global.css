@@ -334,6 +334,10 @@ main {
   font-style: italic;
 }
 
+.fragment-text :is(h1, h2) {
+  text-align: center;
+}
+
 /* breathing room between scenes, no decorative rule */
 .fragment-text hr {
   border: 0;

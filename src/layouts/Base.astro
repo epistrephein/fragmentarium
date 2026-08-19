@@ -79,7 +79,7 @@ const currentYear = new Date().getFullYear();
     </footer>
 
     <script>
-      const readFragmentsStorageKey = 'fragmentastro.read-fragments';
+      const readFragmentsStorageKey = 'fragmentarium.read-fragments';
 
       function getReadFragmentOrders() {
         try {
@@ -138,7 +138,7 @@ const currentYear = new Date().getFullYear();
         }
       });
 
-      document.addEventListener('fragmentastro:fragment-read', (event) => {
+      document.addEventListener('fragmentarium:fragment-read', (event) => {
         const order = (event as CustomEvent<{ order: number }>).detail.order;
         readFragmentOrders.add(String(order));
         saveReadFragmentOrders();

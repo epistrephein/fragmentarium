@@ -104,7 +104,7 @@ const title = fragmentTitle(fragment);
         if (currentFragment.dataset.readStatusToggled === 'true') return;
 
         document.dispatchEvent(
-          new CustomEvent('fragmentastro:fragment-read', { detail: { order } }),
+          new CustomEvent('fragmentarium:fragment-read', { detail: { order } }),
         );
       }, 5_000);
     }

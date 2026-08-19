@@ -1,4 +1,4 @@
-# FragmentAstro
+# Fragmentarium
 
 An [Astro](https://astro.build/) template for publishing a serialized novel
 static site, built from ordered Markdown fragments.

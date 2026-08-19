@@ -73,7 +73,7 @@ Before using this template for a real site, update at least:
 Pages are generated statically:
 
 - `/` — home page
-- `/fragments/:order/` — individual fragment
+- `/fragments/:order_id/` — individual fragment
 - `/read-all/` — continuous reading page
 - `/archive/` — list of published fragments
 - `/about/` — informational page

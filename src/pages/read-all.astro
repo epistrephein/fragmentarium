@@ -20,16 +20,16 @@ const lastDate = dates.length ? new Date(Math.max(...dates)) : undefined;
 ---
 
 <Base
-  title="Leggi dall'inizio — La campagna silenziosa"
-  description="Tutti i frammenti pubblicati de La campagna silenziosa, uno dopo l'altro, in un'unica lettura continua."
+  title="Read all — The Silent Campaign"
+  description="All published fragments from The Silent Campaign, one after another in a single continuous reading."
 >
   <article class="container reading">
-    <p class="page-eyebrow label">Lettura continua</p>
-    <h1 class="page-title">La campagna silenziosa</h1>
-    <p class="work-author">di Tommaso Barbato</p>
+    <p class="page-eyebrow label">Continuous reading</p>
+    <h1 class="page-title">The Silent Campaign</h1>
+    <p class="work-author">by Tommaso Barbato</p>
 
     <p class="reading-meta label">
-      <span>{fragments.length} {fragments.length === 1 ? 'frammento' : 'frammenti'}</span>
+      <span>{fragments.length} {fragments.length === 1 ? 'fragment' : 'fragments'}</span>
       {
         firstDate && lastDate && (
           <span>

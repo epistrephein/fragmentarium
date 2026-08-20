@@ -1,15 +1,15 @@
 ---
 published: 2026-08-01
 order: 7
-description: Le urne arrivano il venerdì e dormono nella palestra della scuola.
+description: The ballot boxes arrive on Friday and sleep in the school gym.
 ---
 
-Le urne arrivarono il venerdì mattina su un camion del ministero, sei casse di plexiglas impilate e legate con una cinghia arancione, e furono scaricate nella palestra della scuola elementare che d'estate serve da magazzino.
+The ballot boxes arrived on Friday morning on a ministry truck, six Plexiglas cases stacked and tied with an orange strap, and were unloaded in the elementary school's gym, which serves as storage in summer.
 
-Corradi firmò la bolla. Contò le casse due volte, non perché dubitasse dell'autista, ma perché il conto era la sua parte del lavoro e gli sembrava disonesto farla in fretta.
+Corradi signed the delivery note. He counted the cases twice, not because he doubted the driver, but because counting was his part of the job and doing it quickly seemed dishonest.
 
-La palestra aveva il pavimento di linoleum verde con le righe del campo di pallavolo, e in fondo, appesi al muro, i canestri alzati come si fa a giugno. Le casse le misero al centro, sotto il lucernario, e per tutto il pomeriggio la luce ci passò attraverso e le proiettò sul linoleum come sei rettangoli d'acqua.
+The gym had a green linoleum floor with volleyball court lines and, at the far end, basketball hoops raised against the wall as they are in June. They put the cases in the centre, beneath the skylight, and all afternoon the light passed through them and cast them onto the linoleum like six rectangles of water.
 
-Prima di chiudere, Corradi si fermò sulla porta. Fuori si sentiva il furgone che faceva il giro della piazza.
+Before locking up, Corradi stopped in the doorway. Outside, the van could be heard circling the square.
 
-Spense la luce che non aveva acceso, tirò la porta, e girò la chiave due volte perché la serratura era vecchia e alla prima non teneva.
+He turned off the light he had not turned on, pulled the door shut, and turned the key twice because the lock was old and did not hold the first time.

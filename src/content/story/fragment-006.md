@@ -1,17 +1,17 @@
 ---
 published: 2026-07-23
 order: 6
-description: Il furgone con l'altoparlante passa tre volte e non dice nulla.
+description: The van with the loudspeaker passes three times and says nothing.
 ---
 
 # II
 
-Il furgone passò per la prima volta il giovedì, alle sette di sera, con l'altoparlante montato sul tetto e girato verso le case. Andava piano, alla velocità di una processione, e dall'altoparlante non usciva niente: un fruscio, il rumore d'aria di un impianto acceso e in attesa.
+The van passed for the first time on Thursday, at seven in the evening, with its loudspeaker mounted on the roof and turned towards the houses. It moved slowly, at the pace of a procession, and nothing came from the loudspeaker: a rustle, the sound of air from a system switched on and waiting.
 
-La gente uscì sui gradini. È il riflesso più antico che c'è: se qualcosa sta per essere detto, si esce a sentirlo.
+People came out onto their steps. It is the oldest reflex there is: if something is about to be said, you go out to hear it.
 
-Passò una seconda volta il venerdì, alla stessa ora, sempre acceso e sempre muto. La sera del sabato, quando si sentì il motore in fondo alla salita, sui gradini c'era mezzo paese, e qualcuno aveva portato la sedia.
+It passed a second time on Friday, at the same hour, always switched on and always silent. On Saturday evening, when the engine could be heard at the foot of the hill, half the town was on the steps, and someone had brought a chair.
 
-Il furgone fece il giro della piazza, rallentò davanti alla farmacia, e proseguì verso la provinciale con il suo fruscio.
+The van went around the square, slowed in front of the pharmacy, and continued towards the provincial road with its rustle.
 
-In quei tre giorni nessuno parlò d'altro. Il perito, dalla finestra della stanza sopra la farmacia, guardò le sedie sui gradini e disse, a nessuno in particolare, che era la campagna elettorale più efficace che avesse visto in quarant'anni, e che gli faceva paura proprio per questo.
+For those three days, no one spoke of anything else. The surveyor, from the window of the room above the pharmacy, looked at the chairs on the steps and said to no one in particular that it was the most effective election campaign he had seen in forty years, and that it frightened him for that very reason.

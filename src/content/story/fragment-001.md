@@ -1,17 +1,17 @@
 ---
 published: 2026-06-12
 order: 1
-description: L'ufficio anagrafe alle sette del mattino, e il registro delle partenze.
+description: The registry office at seven in the morning, and the ledger of departures.
 ---
 
 # I
 
-L'ufficio apriva alle otto, ma Corradi entrava alle sette per via del fresco. Tirava su la tapparella di un terzo, quanto bastava a leggere senza accendere il neon, e si sedeva davanti al registro delle variazioni con il cappotto ancora addosso, perché di notte le pareti dell'edificio comunale trattenevano un freddo che l'estate non riusciva a sciogliere.
+The office opened at eight, but Corradi came in at seven for the cool. He raised the shutter a third of the way, just enough to read without turning on the fluorescent light, and sat before the register of changes with his coat still on, because at night the municipal building's walls held a cold the summer could not dissolve.
 
-Emigrazioni: quattro nel mese. Le scriveva a mano prima di batterle a macchina, un'abitudine che nessuno gli aveva chiesto di prendere e che nessuno gli avrebbe chiesto di smettere. I nomi li conosceva tutti. Uno era il figlio del fornaio, che aveva trovato posto in una ditta di infissi a Reggio; una era la maestra di Sant'Anna, che non aveva trovato niente ma se ne andava comunque.
+Emigrations: four this month. He wrote them out by hand before typing them, a habit no one had asked him to form and no one would ask him to give up. He knew every name. One was the baker's son, who had found work with a window-frame company in Reggio; another was the teacher from Sant'Anna, who had found nothing but was leaving anyway.
 
-Iscrizioni: nessuna.
+Registrations: none.
 
-Metteva la penna nel solco della scrivania e restava un momento con le mani ferme sul foglio, come chi aspetta che il numero cambi da sé. Poi copriva la pagina col foglio di carta velina, la chiudeva, e apriva la finestra sul cortile per sentire se il camion del latte era già passato.
+He set his pen in the groove of his desk and held his hands still over the page for a moment, like someone waiting for the number to change of its own accord. Then he covered the page with a sheet of tissue paper, closed it, and opened the window onto the courtyard to hear whether the milk truck had already passed.
 
-Alle otto e dieci entrò il segretario con i manifesti. Li appoggiò sul bancone senza dire niente, arrotolati e legati con lo spago, e Corradi capì dalla piega che non erano stati stampati in paese.
+At eight ten the secretary came in with the posters. He laid them on the counter without a word, rolled up and tied with string, and Corradi knew from their crease they had not been printed in town.

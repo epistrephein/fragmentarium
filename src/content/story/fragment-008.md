@@ -1,10 +1,10 @@
 ---
 published: 2026-08-08
 order: 8
-description: Bozza non pubblicata — il seggio, la domenica, e il conto delle schede.
+description: Unpublished draft — the polling station, Sunday, and the count of ballots.
 draft: true
 ---
 
-Questo frammento è una bozza: serve a verificare che i contenuti con `draft: true` non compaiano né in homepage, né in archivio, né nel feed RSS, e che non venga generata la pagina `/fragments/8/`.
+This fragment is a draft. It verifies that content with `draft: true` does not appear on the homepage, in the archive, or in the RSS feed, and that the `/fragments/8/` page is not generated.
 
-La domenica il seggio aprì alle sette. Alle sette e dieci non era ancora entrato nessuno, e il presidente di sezione mise la sedia sulla porta per tenerla aperta con il piede.
+On Sunday the polling station opened at seven. At ten past seven, no one had come in yet, and the presiding officer put a chair in the doorway to hold it open with his foot.

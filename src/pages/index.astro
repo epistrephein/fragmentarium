@@ -9,38 +9,37 @@ const lastUpdate = fragments[0]?.data.published;
 ---
 
 <Base
-  title="La campagna silenziosa — romanzo in frammenti"
-  description="Romanzo italiano pubblicato a frammenti: una provincia che si svuota, una campagna elettorale che nessuno nomina."
+  title="The Silent Campaign — a novel in fragments"
+  description="An Italian novel published in fragments: a province emptying out, an election campaign no one names."
   showMasthead={false}
 >
   <section class="container hero">
-    <h1 class="hero-title">La campagna<br />silenziosa</h1>
-    <p class="work-author">di Tommaso Barbato</p>
+    <h1 class="hero-title">The Silent<br />Campaign</h1>
+    <p class="work-author">by Tommaso Barbato</p>
 
     <p class="hero-status label">
-      <span>Un romanzo in frammenti</span>
-      <span>{fragments.length} {fragments.length === 1 ? 'frammento' : 'frammenti'}</span>
-      {lastUpdate && <span>Ultimo: {formatDate(lastUpdate)}</span>}
+      <span>A novel in fragments</span>
+      <span>{fragments.length} {fragments.length === 1 ? 'fragment' : 'fragments'}</span>
+      {lastUpdate && <span>Latest: {formatDate(lastUpdate)}</span>}
     </p>
 
     <div class="hero-intro">
       <p>
-        Un romanzo che esce un pezzo alla volta. Estate in una provincia che si svuota:
-        manifesti scoloriti sui muri di cinta, un comitato che si riunisce nella stanza
-        sopra la farmacia, un impiegato dell&rsquo;anagrafe che tiene il conto di chi
-        parte e non torna.
+        A novel released one piece at a time. Summer in a province emptying out:
+        faded posters on boundary walls, a committee meeting in the room above the
+        pharmacy, a registry clerk keeping count of those who leave and do not return.
       </p>
       <p>
-        Nessuno alza la voce. Per questo si sente tutto. I frammenti non hanno titolo:
-        si contano.
+        No one raises their voice. That is why everything can be heard. The fragments
+        have no titles: they are counted.
       </p>
     </div>
   </section>
 
   <section class="container section">
     <div class="section-head">
-      <h2 class="section-title label">Ultimi frammenti</h2>
-      <a class="label" href="/archive/">Archivio &#8594;</a>
+      <h2 class="section-title label">Latest fragments</h2>
+      <a class="label" href="/archive/">Archive &#8594;</a>
     </div>
     <Register fragments={latest} />
   </section>

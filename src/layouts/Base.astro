@@ -10,14 +10,14 @@ interface Props {
 
 const {
   title,
-  description = 'La campagna silenziosa, romanzo italiano pubblicato a frammenti.',
+  description = 'The Silent Campaign, an Italian novel published in fragments.',
   showMasthead = true,
 } = Astro.props;
 
 const currentYear = new Date().getFullYear();
 ---
 
-<html lang="it">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,12 +35,12 @@ const currentYear = new Date().getFullYear();
     <link
       rel="alternate"
       type="application/rss+xml"
-      title="La campagna silenziosa"
+      title="The Silent Campaign"
       href={new URL('rss.xml', Astro.site)}
     />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="it_IT" />
-    <meta property="og:site_name" content="La campagna silenziosa" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="The Silent Campaign" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL('og-placeholder.png', Astro.site)} />
@@ -56,7 +56,7 @@ const currentYear = new Date().getFullYear();
       showMasthead && (
         <header class="masthead">
           <div class="container masthead-inner">
-            <a class="masthead-link" href="/">La campagna silenziosa</a>
+            <a class="masthead-link" href="/">The Silent Campaign</a>
           </div>
         </header>
       )
@@ -69,9 +69,9 @@ const currentYear = new Date().getFullYear();
     <footer class="footer">
       <div class="container footer-inner">
         <nav class="footer-nav label" aria-label="Secondary navigation">
-          <a href="/read-all/">Leggi dall&rsquo;inizio</a>
-          <a href="/archive/">Archivio</a>
-          <a href="/about/">Informazioni</a>
+          <a href="/read-all/">Read all</a>
+          <a href="/archive/">Archive</a>
+          <a href="/about/">About</a>
           <a href="/rss.xml">RSS</a>
         </nav>
         <p class="footer-note label">&copy; {currentYear} Tommaso Barbato</p>
@@ -117,7 +117,7 @@ const currentYear = new Date().getFullYear();
 
           const readToggle = element.querySelector<HTMLButtonElement>('[data-read-toggle]');
           if (readToggle) {
-            readToggle.textContent = isRead ? '✓ LETTO' : 'NON LETTO';
+            readToggle.textContent = isRead ? '✓ READ' : 'UNREAD';
             readToggle.setAttribute('aria-pressed', String(isRead));
           }
         });

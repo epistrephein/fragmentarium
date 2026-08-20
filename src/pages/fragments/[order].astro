@@ -30,9 +30,9 @@ const title = fragmentTitle(fragment);
 ---
 
 <Base
-  title={`${title} — La campagna silenziosa`}
+  title={`${title} — The Silent Campaign`}
   description={fragment.data.description ??
-    `${title} de La campagna silenziosa, romanzo italiano a frammenti.`}
+    `${title} from The Silent Campaign, an Italian novel in fragments.`}
 >
   <article
     class="container fragment"
@@ -45,7 +45,7 @@ const title = fragmentTitle(fragment);
         {formatDate(fragment.data.published)}
       </time>
       <button class="fragment-read-status" type="button" data-read-toggle aria-pressed="false">
-        NON LETTO
+        UNREAD
       </button>
     </div>
 
@@ -64,11 +64,11 @@ const title = fragmentTitle(fragment);
             data-fragment-order={previous.data.order}
           >
             <span class="pager-desktop">
-              <span class="pager-direction label">&#8592; Precedente</span>
+              <span class="pager-direction label">&#8592; Previous</span>
               <span class="pager-title">{fragmentTitle(previous)}</span>
             </span>
             <span class="pager-mobile label">&#8592; #{previous.data.order}</span>
-            <span class="pager-read-label label">&#10003; Letto</span>
+            <span class="pager-read-label label">&#10003; Read</span>
           </a>
         )
       }
@@ -82,11 +82,11 @@ const title = fragmentTitle(fragment);
             data-fragment-order={next.data.order}
           >
             <span class="pager-desktop">
-              <span class="pager-direction label">Successivo &#8594;</span>
+              <span class="pager-direction label">Next &#8594;</span>
               <span class="pager-title">{fragmentTitle(next)}</span>
             </span>
             <span class="pager-mobile label">#{next.data.order} &#8594;</span>
-            <span class="pager-read-label label">&#10003; Letto</span>
+            <span class="pager-read-label label">&#10003; Read</span>
           </a>
         )
       }

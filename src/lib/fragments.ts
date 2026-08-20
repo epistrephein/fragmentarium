@@ -15,14 +15,14 @@ export async function getFragmentsDescending(): Promise<Fragment[]> {
 }
 
 export function fragmentTitle(fragment: Fragment): string {
-  return `Frammento #${fragment.data.order}`;
+  return `Fragment #${fragment.data.order}`;
 }
 
 export function fragmentUrl(fragment: Fragment): string {
   return `/fragments/${fragment.data.order}/`;
 }
 
-const dateFormatter = new Intl.DateTimeFormat('it-IT', {
+const dateFormatter = new Intl.DateTimeFormat('en-GB', {
   day: '2-digit',
   month: '2-digit',
   year: 'numeric',

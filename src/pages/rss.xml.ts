@@ -8,19 +8,19 @@ export const GET: APIRoute = async (context) => {
   const fragments = await getFragmentsDescending();
 
   return rss({
-    title: 'La campagna silenziosa',
+    title: 'The Silent Campaign',
     description:
-      'Romanzo italiano pubblicato a frammenti: una provincia che si svuota, una campagna elettorale che nessuno nomina.',
+      'An Italian novel published in fragments: a province emptying out, an election campaign no one names.',
     site: context.site!,
     trailingSlash: true,
     xmlns: { dc: 'http://purl.org/dc/elements/1.1/' },
-    customData: `<language>it-IT</language><dc:creator>${authorName}</dc:creator>`,
+    customData: `<language>en-US</language><dc:creator>${authorName}</dc:creator>`,
     items: fragments.map((fragment) => ({
       title: fragmentTitle(fragment),
       link: fragmentUrl(fragment),
       pubDate: fragment.data.published,
       description:
-        fragment.data.description ?? `${fragmentTitle(fragment)} de La campagna silenziosa.`,
+        fragment.data.description ?? `${fragmentTitle(fragment)} from The Silent Campaign.`,
       customData: `<dc:creator>${authorName}</dc:creator>`,
     })),
   });

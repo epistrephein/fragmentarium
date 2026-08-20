@@ -1,17 +1,17 @@
 ---
 published: 2026-06-27
 order: 3
-description: La stanza sopra la farmacia, dove il comitato si riunisce senza verbale.
+description: The room above the pharmacy, where the committee meets without minutes.
 ---
 
-Sopra la farmacia c'è una stanza che il proprietario affitta da sempre a chiunque abbia bisogno di sedie. Ne contiene undici, tutte diverse, e un tavolo da sartoria coperto di panno verde. Ci si arriva da una scala esterna, il che è la ragione vera della sua fortuna: si può salire senza passare davanti a nessuno.
+Above the pharmacy there is a room the owner has always rented to anyone who needs chairs. It holds eleven, all different, and a tailor's table covered with green cloth. You reach it by an outside staircase, which is the real reason for its success: you can go up without passing in front of anyone.
 
-Il comitato si riuniva il martedì. Non prendevano verbale. Uno di loro, che aveva fatto il perito, teneva conto delle presenze su un foglietto e poi lo bruciava nel cenerino, non per prudenza ma per abitudine assunta in tempi in cui la prudenza serviva.
+The committee met on Tuesdays. They took no minutes. One of them, who had trained as a surveyor, kept attendance on a slip of paper and then burned it in the ashtray, not out of caution but from a habit acquired when caution had been necessary.
 
-Quella sera parlarono del cimitero, della strada per Sant'Anna, del prezzo dell'acqua, e a un certo punto smisero di parlare del tutto. Non era imbarazzo. Era il momento della riunione in cui ognuno si accorgeva che le tre cose erano una sola cosa, e che nessuno di loro aveva il nome per dirla.
+That evening they spoke about the cemetery, the road to Sant'Anna, the price of water, and at a certain point they stopped speaking altogether. It was not embarrassment. It was the moment in the meeting when each of them realised the three things were one thing, and none of them had a name for it.
 
-Dalla finestra aperta entrava l'odore dei fusti della farmacia, alcol e liquirizia, e il rumore di un motorino che faceva il giro della piazza per la terza volta senza andare in nessun posto.
+Through the open window came the smell of the pharmacy's canisters, alcohol and liquorice, and the sound of a moped circling the square for the third time without going anywhere.
 
-— Allora martedì, disse il perito.
+— Then Tuesday, said the surveyor.
 
-Scesero le scale a uno a uno, con un minuto di distanza, come si fa quando si vuole che sembri poco.
+They went down the stairs one by one, a minute apart, as people do when they want it to seem like little.

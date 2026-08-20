@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://lacampagnasilenziosa.it',
+  site: 'https://thesilentcampaign.com',
   trailingSlash: 'always',
 });

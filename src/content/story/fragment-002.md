@@ -1,21 +1,21 @@
 ---
 published: 2026-06-19
 order: 2
-description: Di notte, sul muro di cinta del consorzio.
+description: At night, on the cooperative's boundary wall.
 ---
 
-Li attaccarono fra l'una e le tre, quando la strada provinciale è di chi ci lavora. Erano in due: uno teneva il secchio della colla, l'altro la scopa di saggina, e si muovevano con la lentezza di chi ha già fatto questo lavoro molte volte e sa che la fretta fa le bolle.
+They put them up between one and three, when the provincial road belongs to those who work on it. There were two of them: one held the bucket of paste, the other the straw broom, and they moved with the slowness of people who had done this many times and knew that haste makes bubbles.
 
-Il muro di cinta del consorzio agrario è lungo quaranta metri e non ha finestre. Ci stavano ventidue manifesti in fila, ma ne portarono dodici, e li distanziarono in modo che il muro sembrasse pieno. Sopra la carta nuova restava la carta vecchia: un fondo di strati sovrapposti, undici anni di facce e di scritte, che ormai era diventato una specie di intonaco a sé, morbido, che il sole faceva arricciare in agosto.
+The agricultural cooperative's boundary wall is forty metres long and has no windows. Twenty-two posters would fit in a row, but they brought twelve and spaced them so that the wall looked full. Beneath the new paper, the old paper remained: a ground of overlapping layers, eleven years of faces and writing, which had by now become a kind of plaster of its own, soft and curled by the August sun.
 
-Sui manifesti non c'era scritto il nome del partito. C'era una fotografia di grano, e sotto, in caratteri stretti, una sola parola.
+The posters did not name the party. There was a photograph of wheat and, underneath it in narrow type, a single word.
 
-Il più giovane dei due si fermò a guardarla, con la scopa che gocciolava sull'asfalto.
+The younger of the two stopped to look at it, the broom dripping onto the asphalt.
 
-— Non si capisce cosa vogliono, disse.
+— You cannot tell what they want, he said.
 
-L'altro ripiegò il telo sul secchio.
+The other folded the sheet over the bucket.
 
-— Non vogliono che si capisca. Vogliono che si veda.
+— They do not want it understood. They want it seen.
 
-Ripartirono lasciando il furgone in folle fino alla curva, per non svegliare le case della salita.
+They left, letting the van coast in neutral as far as the bend so as not to wake the houses on the hill.

@@ -45,15 +45,15 @@ Each file must contain this frontmatter:
 
 ```yaml
 ---
-published: 2026-08-07
 order: 1
+published: 2026-08-07
 description: A short fragment description.
 draft: true
 ---
 ```
 
+- `order` is the unique positive integer that defines reading order.
 - `published` is the publication date in `YYYY-MM-DD` format.
-- `order` is a unique positive integer that defines reading order.
 - `description` is optional and is shown in the archive and RSS feed.
 - `draft: true` is optional and excludes a fragment from the site, archive and
   RSS feed.

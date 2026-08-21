@@ -1,6 +1,6 @@
 ---
-published: 2026-07-23
 order: 6
+published: 2026-07-23
 description: The van with the loudspeaker passes three times and says nothing.
 ---
 

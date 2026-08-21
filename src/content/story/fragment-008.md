@@ -1,6 +1,6 @@
 ---
-published: 2026-08-08
 order: 8
+published: 2026-08-08
 description: Unpublished draft — the polling station, Sunday, and the count of ballots.
 draft: true
 ---

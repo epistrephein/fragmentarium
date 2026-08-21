@@ -1,6 +1,6 @@
 ---
-published: 2026-07-14
 order: 5
+published: 2026-07-14
 description: Anyone who returns for a funeral always finds the town smaller than they left it.
 ---
 

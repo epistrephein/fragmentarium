@@ -1,6 +1,6 @@
 ---
-published: 2026-08-01
 order: 7
+published: 2026-08-01
 description: The ballot boxes arrive on Friday and sleep in the school gym.
 ---
 

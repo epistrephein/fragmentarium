@@ -1,6 +1,6 @@
 ---
-published: 2026-06-19
 order: 2
+published: 2026-06-19
 description: At night, on the cooperative's boundary wall.
 ---
 

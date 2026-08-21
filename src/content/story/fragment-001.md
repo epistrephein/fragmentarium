@@ -1,6 +1,6 @@
 ---
-published: 2026-06-12
 order: 1
+published: 2026-06-12
 description: The registry office at seven in the morning, and the ledger of departures.
 ---
 

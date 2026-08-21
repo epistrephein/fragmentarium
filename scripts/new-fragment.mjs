@@ -30,8 +30,8 @@ const nextOrder = Math.max(0, ...orders) + 1;
 const fileName = `fragment-${String(nextOrder).padStart(3, '0')}.md`;
 const filePath = path.join(storyDirectory, fileName);
 const contents = `---
-published: ${published}
 order: ${nextOrder}
+published: ${published}
 description: Add a fragment description here.
 draft: true
 ---

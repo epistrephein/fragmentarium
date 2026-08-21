@@ -1,6 +1,6 @@
 ---
-published: 2026-06-27
 order: 3
+published: 2026-06-27
 description: The room above the pharmacy, where the committee meets without minutes.
 ---
 

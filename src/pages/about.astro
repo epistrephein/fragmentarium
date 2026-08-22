@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { getFragments } from '../lib/fragments';
+import { getFragments, sitePath } from '../lib/fragments';
 
 const fragments = await getFragments();
 ---
@@ -28,8 +28,8 @@ const fragments = await getFragments();
 
     <h2>Where to find them</h2>
     <p>
-      The <a href="/archive/">archive</a> collects everything published so far. Those who
-      prefer to receive fragments as they appear can follow the <a href="/rss.xml">RSS feed</a>:
+      The <a href={sitePath('archive/')}>archive</a> collects everything published so far. Those who
+      prefer to receive fragments as they appear can follow the <a href={sitePath('rss.xml')}>RSS feed</a>:
       every new release arrives with the same name it has on the site.
     </p>
 

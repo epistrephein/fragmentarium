@@ -11,7 +11,7 @@ export const GET: APIRoute = async (context) => {
     title: 'The Silent Campaign',
     description:
       'An Italian novel published in fragments: a province emptying out, an election campaign no one names.',
-    site: context.site!,
+    site: new URL(import.meta.env.BASE_URL, context.site!),
     trailingSlash: true,
     xmlns: { dc: 'http://purl.org/dc/elements/1.1/' },
     customData: `<language>en-US</language><dc:creator>${authorName}</dc:creator>`,

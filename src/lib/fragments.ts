@@ -18,8 +18,13 @@ export function fragmentTitle(fragment: Fragment): string {
   return `Fragment #${fragment.data.order}`;
 }
 
+/** A root-relative URL that includes Astro's configured deployment base. */
+export function sitePath(path = ''): string {
+  return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+}
+
 export function fragmentUrl(fragment: Fragment): string {
-  return `/fragments/${fragment.data.order}/`;
+  return sitePath(`fragments/${fragment.data.order}/`);
 }
 
 const dateFormatter = new Intl.DateTimeFormat('en-GB', {

@@ -89,8 +89,8 @@ every push to `main`.
 3. Rename `.github/samples/deploy.yml` to `.github/workflows/deploy.yml`.
 4. Push to `main`.
 
-For a custom domain, set `site` to the final URL, add `public/CNAME` containing
-the domain, and configure DNS with your provider.
+For a custom domain, set `site` to the final URL, add a `CNAME` file in the root
+of the repo containing the domain, and configure DNS with your provider.
 
 For a project site at `https://username.github.io/repository/`, also set
 `base: '/repository'` in `astro.config.mjs` and ensure internal links respect
